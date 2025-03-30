@@ -5,8 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>示例页面</title>
-    <meta name="description" content="这是一个示例页面，展示了 HTML 的基本元素。">
-    <meta name="keywords" content="HTML, 示例页面, 基本元素">
+    <style>
+        body {
+            /* 使用线性渐变背景 */
+            background: linear-gradient(to bottom, #e66465, #9198e5); 
+            font-family: 楷体;
+        }
+        /* 设置标题、段落和列表居中 */
+        h1, h2, p, ul, ol {
+            text-align: center;
+        }
+        /* 让视频居中并设置最大宽度 */
+        video {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        /* 让图片居中并设置最大宽度，保证图片大小适中 */
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,58 +57,28 @@
     </ul>
 
     <ol>
-        <li>《沁园春·雪》创作于1936年2月，当时毛泽东等率领红军东征抗日先锋军东渡黄河、突破阎军防线后，踏雪沿官道山行进，来到海拔千米、白雪覆盖的塬上视察地形。</li>
+        <li>《沁园春·雪》创作于1936年2月,当时毛泽东等率领红军东征抗日先锋军东渡黄河、突破阎军防线后,踏雪沿官道山行进,来到海拔千米、白雪覆盖的塬上视察地形。</li>
         <li>上阕描写北国雪景，展现祖国山河的壮丽；下阕由祖国山河的壮丽引出英雄人物，纵论历代英雄，抒发诗人的抱负。</li>
         <li>全词熔写景、议论和抒情于一炉，意境壮美，气势恢宏，感情奔放，胸襟豪迈，颇能代表毛泽东诗词的豪放风格。</li>
     </ol>
 
+    <img src="C:\Users\31081\Desktop\Web前端技术\231news\images\沁园春-雪.png" alt="示例图片">
+
+    <!-- 插入三个换行符 -->
+    <br>
+    <br>
+    <br>
+
     <!-- 添加视频 -->
     <video width="640" height="360" controls>
-        <!-- 修改 src 属性，使用相对路径 -->
-        <source src="乌萨奇..mp4" type="video/mp4">
+        <!-- 修改为本地视频文件路径 -->
+        <source src="c:\Users\31081\Desktop\Web前端技术\231news\videos\video.mp4" type="video/mp4">
         您的浏览器不支持视频播放。
     </video>
-
-    <!-- 原有的 iframe 链接 -->
-    <iframe src="//player.bilibili.com/player.html?aid=114141608019486&bvid=BV1TPRJY5EEB&cid=28804517850&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-    <!-- 图片 -->
-    <img src="https://ts1.tc.mm.bing.net/th/id/R-C.3df192f6b05dbb20ae4117edfe2631f9?rik=5KjiRuPAQINQDQ&riu=http%3a%2f%2fpic1.bbzhi.com%2fdongwubizhi%2fjiayouyouquan-keaixiaogoubizhi%2fanimal_sz237_lovely_puppy_31125_3.jpg&ehk=xmEcMSNVJiJQxkeSvaU%2f04X2PuHnvQPUYgyE7WOphWI%3d&risl=&pid=ImgRaw&r=0" alt="示例图片">
-
-    <!-- 表单 -->
-    <form action="#">
-        <label for="name">姓名:</label>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">邮箱:</label>
-        <input type="email" id="email" name="email"><br>
-        <input type="submit" value="提交">
-    </form>
-
-    <table border="1">
-        <!-- 表头 -->
-        <tr>
-            <th>姓名</th>
-            <th>年龄</th>
-            <th>爱好</th>
-        </tr>
-        <!-- 第一行 -->
-        <tr>
-            <td>黄雪梅</td>
-            <td>38岁</td>
-            <td>喜欢帅哥</td>
-        </tr>
-        <!-- 第二行 -->
-        <tr>
-            <td>张金林</td>
-            <td>37</td>
-            <td>爱吃鸡爪</td>
-        </tr>
-        <!-- 第三行 -->
-        <tr>
-            <td>徐凤君</td>
-            <td>20</td>
-            <td>全能高手</td>
-        </tr>
-    </table>
+    <p>
+        北国风光，千里冰封，万里雪飘。
+        江山如此多娇，引无数英雄竞折腰。
+        雪满江山，英雄竞折腰，谁与争锋！
 </body>
 
 </html>
