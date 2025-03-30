@@ -6,30 +6,51 @@
   <title>CSS CSS 核心概念：背景、盒模型、布局、动画</title>
   <style>
     body {
-      background-color: #f0f0f0;
+        /* 修改背景图片路径的引号问题，使用单引号包裹路径，避免转义问题 */
+        background-image: url('C:/Users/31081/Desktop/数据新闻理论与实践/素材图库/乌萨奇/73SVxjxBUenBaQ9.jpeg');
+        /* 防止背景图片重复 */
+        background-repeat: no-repeat;
+        /* 让背景图片在页面中居中显示 */
+        background-position: center center;
+        /* 修改背景图片大小，设置为 cover 使图片覆盖整个页面 */
+        background-size: cover; 
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif; /* 设置页面字体 */
     }
     h1 {
       color: #333;
       text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 为标题添加阴影 */
     }
     section {
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.8); /* 设置半透明背景 */
       padding: 20px;
       margin: 20px;
       border: 1px solid #ccc;
+      border-radius: 10px; /* 为 section 添加圆角 */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 为 section 添加阴影 */
     }
     .box {
       width: 300px;
       height: 200px;
-      background-color: #998dee;
+      /* 删除紫色背景 */
+      /* background-color: #998dee; */
       padding: 20px;
       border: 10px solid #333;
       margin: 20px;
+      box-sizing: border-box; /* 使盒模型计算包含内边距和边框 */
+    }
+    /* 新增样式，让.box 内的图片适应容器 */
+    .box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 保持图片比例，覆盖整个容器 */
     }
   
     .flex-container {
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap; /* 当空间不足时，元素换行显示 */
     }
     
     @keyframes slide {
@@ -49,6 +70,7 @@
       background-color: #ff6600;
       animation: slide 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
       animation-delay: 1s;
+      border-radius: 50%; /* 使动画元素变成圆形 */
     }
   </style>
 </head>
@@ -56,26 +78,52 @@
   <h1>CSS 核心概念：背景、盒模型、布局、动画</h1>
   <section>
     <h2>背景</h2>
-    <p>CSS 可以设置元素的背景颜色、背景图像、背景重复、背景位置等属性。</p>
+    <p>CSS 可以设置元素的背景颜色、背景图像、背景重复、背景位置等属性。通过这些属性，我们可以打造出丰富多彩的页面背景效果。</p>
   </section>
   <section>
     <h2>盒模型</h2>
-    <div>
-      <div class="box"></div>
-      <div class="box"></div>
+    <div class="flex-container">
+      <div class="box">
+        <!-- 添加图片 -->
+        <img src="C:\Users\31081\Desktop\数据新闻理论与实践\素材图库\乌萨奇\OIP-C (7).jpg" alt="示例图片">
+        爱学习的乌萨奇
+      </div>
+      <div class="box">
+        <!-- 添加图片 -->
+        <img src="C:\Users\31081\Desktop\数据新闻理论与实践\素材图库\乌萨奇\OIP-C.jpg" alt="示例图片">
+        知识渊博的乌萨奇
+      </div>
     </div>
   </section>
   <section>
     <h2>布局</h2>
     <div class="flex-container">
-      <div class="box"></div>
-      <div class="box"></div>
+        <div class="box">
+            <!-- 添加图片 -->
+            <img src="C:\Users\31081\Desktop\数据新闻理论与实践\素材图库\乌萨奇\P5SPJGJafb9Al30.jpeg" alt="布局示例图片1">
+            睡醒的乌萨奇
+        </div>
+        <div class="box">
+            <!-- 添加图片 -->
+            <img src="C:\Users\31081\Desktop\数据新闻理论与实践\素材图库\乌萨奇\gVSeV7VyUQMeBxG.jpeg" alt="布局示例图片2">
+            傲娇的乌萨奇
+        </div>
     </div>
-   
-  </section>
+</section>
   <section>
     <h2>动画</h2>
     <div class="animated-box"></div>
+    <p>通过 CSS 动画，我们可以为页面元素添加动态效果，提升用户体验。</p>
+  </section>
+  <section>
+    <h2>其他常用元素</h2>
+    <!-- 修正错误的 audio 标签 -->
+    <!-- 这里原代码 audio 标签使用有误，可能是想添加音频，但未完整书写 -->
+    <!-- 添加视频 -->
+    <video width="320" height="240" controls>
+      <source src="C:\Users\31081\Desktop\Web前端技术\231news\images\乌萨奇..mp4" type="video/mp4">
+      您的浏览器不支持视频播放。
+    </video>
   </section>
 </body>
 </html>
