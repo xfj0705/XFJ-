@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>JavaScript 核心语法学习</title>
+  <script >
+    let a = 300;
+    // alert(a);
+    console.log(a);
+    const api_key = '123456';
+    console.log(api_key);
+    console.log(typeof a, typeof api_key, typeof true);
+    let b = '123456';
+    console.log(typeof b);
+    console.log(a + b);
+    // 修正：移除错误的 Number 使用
+    // console.log(a + Number + b); 
+    let c = '300';
+    console.log(a == c);
+    console.log(a === c);
+
+    // 分支语句
+    let curren_time = '11:42';
+    if (curren_time == '12:20') {
+      console.log('吃午饭');
+    } else {
+      console.log('假装学习');
+    }
+
+    // for 循环
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+    }
+
+    // while 循环
+    let hug = 70;
+    while (hug < 100) {
+      console.log('继续学习');
+      hug = hug + 10;
+    }
+
+    // 定义 intro2 函数
+    function intro2(content1, content2) {
+      console.log('以下是我介绍的内容：' + String(content1) + String(content2));
+    }
+
+    // 调用 intro2 函数
+    intro2('这是传入的参数', '');
+
+    // 定义 intro3 函数
+    function intro3(arg1, arg2, arg3) {
+      console.log('intro3 函数接收到的参数：', arg1, arg2, arg3);
+    }
+
+    // 调用 intro3 函数
+    intro3('参数1', '参数2', 444);
+
+    // 修正 intro 函数
+    function intro(content1, content2) {
+      console.log('以下是我介绍的内容：' + String(content1) + String(content2));
+    }
+
+    // 调用 intro 函数
+    intro('内容1', '内容2');
+
+    function intro4(content) {
+      console.log(content);
+      return content + '这是返回的内容';
+    }
+
+    intro4('带回返回值的函数');
+    let result = intro4('带回返回值的函数');
+    console.log(result);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

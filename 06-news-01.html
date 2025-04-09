@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 语法练习2</title>
+    <style>
+        /* 添加一些简单的样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+    </style>
+    <script>
+        // 类和对象
+        // 1. 定义一个类
+        class Teacher {
+            // 构造函数
+            constructor(name, age, school) {
+                this.name = name;
+                this.age = age;
+                this.school = school;
+            }
+            // 方法
+            learn(subject) {
+                // 使用反引号来创建字符串模板
+                console.log(`${this.name}在写教案...${subject}`);
+            }
+            exam() {
+                // 使用反引号来创建字符串模板
+                console.log(`${this.name}在监考...`);
+            }
+        }
+        // 2. 创建对象
+        let teacher1 = new Teacher('王老师', 30, '清华附属小学');
+        // 调用正确的对象
+        teacher1.learn("数学");
+        teacher1.exam();
+
+        // 修正类定义的语法错误
+        class UniversityProfessor extends Teacher {
+            constructor(name, age, university, salary, mayor, experience) {
+                super(name, age, university);
+                this.salary = salary;
+                this.mayor = mayor;
+                this.experience = experience;
+            }
+
+            intern(corp) {
+                console.log(`${this.name}在${corp}实习 获得经验值99999`);
+                super.exam();
+            }
+        }
+
+        let professor1 = new UniversityProfessor('王老师', 40, '清华大学', 100000, '王老师', 10);
+        let teacher2 = professor1;
+        teacher2.intern('百度');
+
+
+        //回调函数，函数作为参数传递给林另一个函数
+        console.log("777777");
+
+        setTimeout(function() { console.log("888888") },1000);
+        console.log("999999");
+    </script>
+</head>
+
+<body>
+<h1 id="demo" onclick="alert('你点我干嘛！')">这是一个标题的原始内容</h1>
+
+<script>
+    let myh1 = document.getElementById("demo");
+    console.log(myh1);
+    //1.改变元素的内容
+    myh1.innerHTML = "这是一个标题的新内容";
+    //2.改变元素的样式
+    myh1.style.color = "#888898";
+    //3.增加事件
+    myh1.onmouseover = function () {
+        alert("讨厌~");
+    }
+    window.onload = function () {
+        alert("页面加载完成了");
+    }
+    </script>
+</body>
+</html>
