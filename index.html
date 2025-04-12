@@ -4,81 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>示例页面</title>
-    <style>
-        body {
-            /* 使用线性渐变背景 */
-            background: linear-gradient(to bottom, #e66465, #9198e5); 
-            font-family: 楷体;
-        }
-        /* 设置标题、段落和列表居中 */
-        h1, h2, p, ul, ol {
-            text-align: center;
-        }
-        /* 让视频居中并设置最大宽度 */
-        video {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-        }
-        /* 让图片居中并设置最大宽度，保证图片大小适中 */
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>个人网页平台</title>
+    <!-- 引入外部 CSS 文件 -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- 标题 -->
-    <h1>沁园春</h1>
-    <h2>雪</h2>
+    <!-- 页眉部分 -->
+    <header>
+        <h1>西北民族大学新闻传播学院</h1>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- 段落 -->
-    <p>看海看久了想见人，见人见多了想看海。（网络唯美句子）</p>
+    <!-- 主内容区域，添加类名 main-content -->
+    <main class="main-content">
+        <section>
+            <h2>页面简介</h2>
+            <p class="page-intro">欢迎来到我的个人页面！这是一个见证我成长与蜕变的地方。曾经的我，或许平凡无奇，但心中始终怀揣着梦想与希望。在人生的道路上，我不断努力、不断学习，克服了一个又一个的困难与挑战。</p>
+            <p class="page-intro">每一次的挫折都是我前进的动力，每一次的成功都是我成长的印记。在这里，我将分享我的奋斗历程、成长心得，希望能够激励更多的人勇敢追求自己的梦想，不断超越自我，创造属于自己的精彩人生。</p>
+        </section>
 
-    <!-- 列表 -->
-    <ul>
-        <li>北国风光，千里冰封，万里雪飘。</li>
-        <li>江山如此多娇，引无数英雄竞折腰。</li>
-        <li>俱往矣，数风流人物，还看今朝。</li>
-    </ul>
+        <!-- 新增个人介绍部分 -->
+        <section>
+            <h2>个人介绍</h2>
+            <div class="personal-intro">
+                <img src="C:\Users\31081\Desktop\徐\微信图片_20250412150829.png" alt="个人照片" style="width: 200px; height: auto; margin-right: 20px;">
+                <div class="intro-text">
+                    <p>我是徐凤君,一名新闻学专业的学生。在校期间,我担任新闻传播学院宣传部负责人一职,负责学院宣传工作的策划与执行,致力于传播学院的正能量与学术风采。同时,作为18号楼2层层长,我积极服务同学，维护楼层秩序，营造温馨和谐的居住环境。
 
-    <ol>
-        <li>《沁园春·雪》创作于1936年2月,当时毛泽东等率领红军东征抗日先锋军东渡黄河、突破阎军防线后,踏雪沿官道山行进,来到海拔千米、白雪覆盖的塬上视察地形。</li>
-        <li>上阕描写北国雪景，展现祖国山河的壮丽；下阕由祖国山河的壮丽引出英雄人物，纵论历代英雄，抒发诗人的抱负。</li>
-        <li>全词熔写景、议论和抒情于一炉，意境壮美，气势恢宏，感情奔放，胸襟豪迈，颇能代表毛泽东诗词的豪放风格。</li>
-    </ol>
+                        在个人兴趣方面，我热爱写文章，用文字记录生活点滴，抒发内心情感；喜欢看电影，通过光影世界感受不同的人生与文化；热衷于打羽毛球，在运动中释放压力，保持身心健康。此外，唱歌也是我的特长之一，我享受在旋律中表达自我，传递情感。
 
-    <img src="C:\Users\31081\Desktop\Web前端技术\231news\images\沁园春-雪.png" alt="示例图片">
+                        未来，我将继续努力学习专业知识，提升综合素质，为新闻事业贡献自己的力量
 
-    <!-- 插入三个换行符 -->
-    <br>
-    <br>
-    <br>
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <!-- 添加视频 -->
-    <video width="640" height="360" controls>
-        <!-- 修改为本地视频文件路径 -->
-        <source src="c:\Users\31081\Desktop\Web前端技术\231news\videos\video.mp4" type="video/mp4">
-        您的浏览器不支持视频播放。
-    </video>
-    <p>
-        北国风光，千里冰封，万里雪飘。
-        江山如此多娇，引无数英雄竞折腰。
-        雪满江山，英雄竞折腰，谁与争锋！
+        <!-- 添加文章 -->
+        <article>
+            <h2>撰写的新闻文章与完成的作品</h2>
+        </article>
+
+        <!-- 添加侧边栏 -->
+        <aside>
+            <h3>相关链接</h3>
+            <ul>
+                <li><a href=https://mp.weixin.qq.com/s/c0lGy7ZdQjEqDW_WSPx7_w>新闻学院微信公众号</a></li>
+                <li><a href=https://mp.weixin.qq.com/s/W8fcRG6NgIEGRXfkx_TEbg>"闻铭志"公众号</a></li>
+                <li><a href=https://cdv.webportal.top/v/e4lb0Z3a>新闻采访与写作期末作品</a></li>
+            </ul>
+        </aside>
+
+       
+    </main>
+
+    <!-- 页脚部分 -->
+    <footer>
+        <p>&copy; 2025 我的页面. 保留所有权利。</p>
+    </footer>
 </body>
 
 </html>
